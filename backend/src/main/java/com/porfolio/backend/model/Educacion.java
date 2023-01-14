@@ -12,34 +12,32 @@ import lombok.Setter;
 
 @Getter@Setter
 @Entity
-public class Experencia {
+public class Educacion {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Basic
-    private String nombreEmpresa;
-    private String puesto;
-    private String descripcion;
+    private String titulo;
+    private String nombreInstituto;
     private String urlLogo;
+    private boolean estado;
     private Date desde;
     private Date hasta;
 
-    public Experencia() {
+    public Educacion() {
     }
 
-    public Experencia(Long id, String nombreEmpresa, String puesto, String descripcion, String urlLogo, Date desde, Date hasta) {
+    public Educacion(Long id, String titulo, String nombreInstituto, String urlLogo, boolean estado, Date desde, Date hasta) {
         this.id = id;
-        this.nombreEmpresa = nombreEmpresa;
-        this.puesto = puesto;
-        this.descripcion = descripcion;
+        this.titulo = titulo;
+        this.nombreInstituto = nombreInstituto;
         this.urlLogo = urlLogo;
+        this.estado = estado;
         this.desde = desde;
         this.hasta = hasta;
     }
-    
 
- 
-   
+    
     
 }
