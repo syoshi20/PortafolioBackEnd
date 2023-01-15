@@ -5,7 +5,9 @@ import com.porfolio.backend.model.Experencia;
 import com.porfolio.backend.repository.ExperienciaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ExperienciaService implements IExperienciaService{
     
     @Autowired
@@ -17,7 +19,7 @@ public class ExperienciaService implements IExperienciaService{
     }
 
     @Override
-    public void crearExperiencia(Experencia exp) {
+    public void saveExperiencia(Experencia exp) {
         expRepo.save(exp);
     }
 

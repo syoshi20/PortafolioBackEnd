@@ -5,7 +5,9 @@ import com.porfolio.backend.model.Educacion;
 import com.porfolio.backend.repository.EducacionRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EducacionService implements IEducacionService{
     
     @Autowired
@@ -17,7 +19,7 @@ public class EducacionService implements IEducacionService{
     }
 
     @Override
-    public void crearEducacion(Educacion edu) {
+    public void saveEducacion(Educacion edu) {
         eduRepo.save(edu); 
     }
 

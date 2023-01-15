@@ -9,7 +9,7 @@ public interface IPerfilService {
     
     public List<Perfil> verPerfil();
     
-    public void crearPerfil(Perfil per);
+    public void savePerfil(Perfil per);
     
     public void borrarPerfil(Long id);
     
