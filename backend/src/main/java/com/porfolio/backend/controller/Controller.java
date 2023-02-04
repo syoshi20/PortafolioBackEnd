@@ -51,7 +51,7 @@ public class Controller {
   public Perfil editPerfil(@PathVariable Long id,
                            @RequestParam ("nombre")String nuevoNombre,
                            @RequestParam ("apellido")String nuevoApellido,
-                           @RequestParam ("titulo")String []nuevoTitulo,
+                           @RequestParam ("titulo")String nuevoTitulo,
                            @RequestParam ("localidad")String nuevoLocal,
                            @RequestParam ("provincia")String nuevoProv,
                            @RequestParam ("acercaDe")String nuevoAcercaDe,
@@ -60,7 +60,7 @@ public class Controller {
       Perfil per=perServ.buscarPerfil(id);
       per.setNombre(nuevoNombre);
       per.setApellido(nuevoApellido);
-      per.setTitulos(nuevoTitulo);
+      per.setTitulo(nuevoTitulo);
       per.setLocalidad(nuevoLocal);
       per.setProvincia(nuevoProv);
       per.setAcercaDe(nuevoAcercaDe);
